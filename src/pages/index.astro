@@ -1,24 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// @ts-ignore
-import fs from 'fs';
-
-// Load generated background image
-const imagePath = 'C:\\Users\\HP\\.gemini\\antigravity\\brain\\193c3bfa-4d2e-4f7c-b95a-3b2b95d430e9\\hero_field_background_1777164956963.png';
-let bgImageBase64 = '';
-try {
-  const imageBuffer = fs.readFileSync(imagePath);
-  bgImageBase64 = `data:image/png;base64,${imageBuffer.toString('base64')}`;
-} catch (e) {
-  console.error("Could not load background image", e);
-}
 ---
 
 <Layout title="Nativa Service - Governança e Estratégia Ambiental">
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-bg" style={`background-image: linear-gradient(to bottom, rgba(30, 59, 42, 0.7), rgba(18, 33, 25, 0.95)), url('${bgImageBase64}')`}></div>
+      <div class="hero-bg" style="background-image: linear-gradient(to bottom, rgba(30, 59, 42, 0.7), rgba(18, 33, 25, 0.95)), url('/images/hero_bg.png');"></div>
       <div class="container hero-content">
         <h1 class="logo-text gsap-reveal">NATIVA <span class="accent">SERVICE</span></h1>
         <h2 class="gsap-reveal-delay">Governança e Estratégia Ambiental</h2>
