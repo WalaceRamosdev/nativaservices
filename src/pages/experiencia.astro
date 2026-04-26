@@ -87,9 +87,15 @@ import Layout from '../layouts/Layout.astro';
         <div class="clients-section">
           <h3 class="mb-4" style="color: var(--color-accent); text-align: center;">Nossos Clientes</h3>
           <div class="clients-list gsap-fade">
-            <div class="client-logo">JII</div>
-            <div class="client-logo">POWER Manutenção</div>
-            <div class="client-logo">FAZENDA BELA VISTA</div>
+            <div class="client-logo">
+              <img src="/images/clientes/image.png" alt="Cliente 1" class="client-img" />
+            </div>
+            <div class="client-logo">
+              <img src="/images/clientes/image copy.png" alt="POWER Manutenção" class="client-img" />
+            </div>
+            <div class="client-logo">
+              <img src="/images/clientes/image copy 2.png" alt="Fazenda Bela Vista" class="client-img" />
+            </div>
           </div>
         </div>
 
@@ -118,7 +124,9 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .page-header {
     padding: 12rem 0 6rem 0;
-    background: radial-gradient(circle at center, #1e3b2a 0%, #122119 100%);
+    background: linear-gradient(to bottom, rgba(30, 59, 42, 0.7), rgba(18, 33, 25, 0.95)), url('/images/experiencia_hero_bg.png');
+    background-size: cover;
+    background-position: center;
     color: #fff;
   }
   .page-header h1 {
@@ -226,13 +234,19 @@ import Layout from '../layouts/Layout.astro';
   }
   .client-logo {
     background: #fff;
-    padding: 2rem 3rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 10px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     border: 1px solid rgba(0,0,0,0.05);
+  }
+  .client-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Helps remove white backgrounds if any */
   }
 
   .partners-grid {
