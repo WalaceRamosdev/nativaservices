@@ -55,6 +55,13 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defa
     animation: none;
   }
 
+  :global(body.menu-open) .whatsapp-btn {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(20px) scale(0.9);
+  }
+
   @media (max-width: 768px) {
     .whatsapp-btn {
       bottom: 1.5rem;
