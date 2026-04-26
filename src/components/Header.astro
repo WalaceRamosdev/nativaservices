@@ -1,0 +1,258 @@
+---
+---
+<header class="site-header">
+  <div class="header-pill">
+    <a href="/" class="logo">
+      <img src="/images/identidadeVisual/logo.svg" alt="Nativa Service Logo" />
+    </a>
+    
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/" class="nav-link">Início</a></li>
+        <li><a href="/sobre" class="nav-link">A Nativa</a></li>
+        <li><a href="/servicos" class="nav-link">Serviços</a></li>
+        <li><a href="/experiencia" class="nav-link">Experiência</a></li>
+      </ul>
+      <a href="/contato" class="btn-contact">Fale Conosco</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none; /* Deixa os cliques passarem pelas áreas transparentes laterais */
+  }
+  
+  .header-pill {
+    position: relative; /* Para permitir absolutismo interno */
+    pointer-events: auto; /* Reativa cliques apenas na área da pílula */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.35); /* Opacidade reduzida */
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    width: 95%;
+    max-width: 1000px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Estado Scrollado (quando a página desce) */
+  :global(body[data-scrolled="true"]) .header-pill {
+    max-width: 850px;
+    padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55); /* Opacidade reduzida */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    z-index: 201;
+  }
+  .logo img {
+    height: 50px;
+    width: auto;
+    transition: height 0.4s ease;
+  }
+  :global(body[data-scrolled="true"]) .logo img {
+    height: 40px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 201;
+    padding: 10px;
+  }
+  .menu-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--color-primary);
+    transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 2px;
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .main-nav ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efeito sublinhado animado no hover */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  .nav-link:hover {
+    color: var(--color-accent);
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Botão Contato embutido na pílula */
+  .btn-contact {
+    background: var(--color-primary);
+    color: #fff !important;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 59, 42, 0.2);
+  }
+  .btn-contact:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(196, 154, 69, 0.3);
+  }
+
+  /* Responsividade do Header */
+  @media (max-width: 900px) {
+    .site-header { top: 15px; }
+    .header-pill {
+      border-radius: 20px;
+      padding: 0.8rem 1.2rem;
+    }
+    .main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(245, 243, 235, 0.98);
+      backdrop-filter: blur(15px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      
+      /* Animação via clip-path não causa overflow */
+      clip-path: circle(0px at calc(100% - 40px) 40px);
+      opacity: 0;
+      pointer-events: none;
+      transition: clip-path 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    }
+    .main-nav.active {
+      clip-path: circle(150vh at calc(100% - 40px) 40px);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .main-nav ul {
+      position: relative;
+      left: auto;
+      transform: none;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-size: 1.8rem;
+    }
+    .btn-contact {
+      font-size: 1.2rem;
+      padding: 1rem 2.5rem;
+    }
+    .menu-toggle {
+      display: flex;
+    }
+    /* Animação do Toggle para "X" */
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    
+    // Toggle Menu Mobile
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        nav.classList.toggle('active');
+        // Bloqueia scroll do fundo quando menu tá aberto
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+      });
+      
+      const links = nav.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.classList.remove('active');
+          nav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Shrink Header on Scroll Effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        document.body.setAttribute('data-scrolled', 'true');
+      } else {
+        document.body.removeAttribute('data-scrolled');
+      }
+    });
+  });
+</script>

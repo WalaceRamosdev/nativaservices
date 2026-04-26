@@ -1,0 +1,282 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nossa Experiência | Nativa Service">
+  <div class="page-header">
+    <div class="container text-center">
+      <h1 class="gsap-reveal">Nossa <span class="accent">Experiência</span></h1>
+      <p class="subtitle gsap-reveal-delay">Resultados entregues, setores de atuação e parcerias estratégicas.</p>
+    </div>
+  </div>
+
+  <section class="section-padding bg-dark">
+    <div class="container">
+      <div class="results-header text-center mb-5">
+        <h2 class="section-title text-light">Principais Resultados Alcançados</h2>
+      </div>
+      
+      <div class="results-grid">
+        <div class="result-card gsap-fade-up">
+          <div class="number">451</div>
+          <p>Processos regularizados junto ao órgãos SEMAD, ANA, FEAM, SUPRAM, IEF, IGAM e IBAMA</p>
+        </div>
+        <div class="result-card gsap-fade-up">
+          <div class="number">100+</div>
+          <p>Entrega de declarações, 50 autorizações ambientais e 31 licenças de complexidade alta</p>
+        </div>
+        <div class="result-card gsap-fade-up">
+          <div class="number">1951</div>
+          <p>Atendimentos a requisitos obrigatórios no Iusnatura</p>
+        </div>
+        <div class="result-card gsap-fade-up">
+          <div class="number">R$ 600k</div>
+          <p>Economia em multas e autuações ambientais</p>
+        </div>
+        
+        <div class="result-highlight glass-panel gsap-fade">
+          <h3>Estruturações de Destaque</h3>
+          <ul>
+            <li>Estruturação do LAIA – Levantamento de Aspectos e Impactos Ambientais.</li>
+            <li>Estruturação do Plano de Biodiversidade Padrão Bonsucro e ISO 14001.</li>
+            <li>Relatório de Sustentabilidade com classificação Razoável (primeira empresa do setor sucroenergético).</li>
+            <li>Selo ouro no inventário de GEE por dois anos consecutivos.</li>
+            <li>Estruturação do Plano de Transição Climática e Plano Plurianual ESG.</li>
+            <li>Nota B no report CDP e Coordenação de Comissão ESG e report ao Ise B3.</li>
+            <li>Estruturação de time de sustentabilidade com definição de processos e indicadores.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Principais Setores de Atuação</h2>
+      
+      <div class="sectors-grid">
+        <div class="sector-card gsap-fade-up">
+          <h3>Indústria</h3>
+          <p>Apoio à gestão ambiental, licenciamento, conformidade regulatória e gestão de riscos ambientais em operações industriais.</p>
+        </div>
+        <div class="sector-card gsap-fade-up">
+          <h3>Agroindústria</h3>
+          <p>Suporte à regularização ambiental, gestão territorial e condução de processos ambientais no setor agroindustrial.</p>
+        </div>
+        <div class="sector-card gsap-fade-up">
+          <h3>Energia</h3>
+          <p>Apoio à condução de processos ambientais e gestão regulatória em projetos de geração e infraestrutura energética.</p>
+        </div>
+        <div class="sector-card gsap-fade-up">
+          <h3>Mineração</h3>
+          <p>Suporte técnico na gestão ambiental, atendimento às exigências regulatórias e organização de processos ambientais.</p>
+        </div>
+        <div class="sector-card gsap-fade-up">
+          <h3>Infraestrutura</h3>
+          <p>Apoio na condução de processos ambientais associados a projetos de infraestrutura e desenvolvimento territorial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Quem confia em nós</h2>
+      
+      <div class="partners-wrap">
+        <div class="clients-section">
+          <h3 class="mb-4" style="color: var(--color-accent); text-align: center;">Nossos Clientes</h3>
+          <div class="clients-list gsap-fade">
+            <div class="client-logo">JII</div>
+            <div class="client-logo">POWER Manutenção</div>
+            <div class="client-logo">FAZENDA BELA VISTA</div>
+          </div>
+        </div>
+
+        <div class="partners-section mt-5">
+          <h3 class="mb-4" style="color: var(--color-accent); text-align: center;">Nossos Parceiros</h3>
+          <div class="partners-grid">
+            <div class="partner-card gsap-fade-up">
+              <h4>Mayne Veronesi</h4>
+              <p>Engenheira Ambiental e Sanitarista, Engenheira de Segurança do Trabalho, Mestre em Tecnologia, Ambiente e Sociedade.</p>
+            </div>
+            <div class="partner-card gsap-fade-up">
+              <h4>AG mapa</h4>
+              <p>Empresa especializada em Agrimensura, Geoprocessamento e Levantamentos topográficos.</p>
+            </div>
+            <div class="partner-card gsap-fade-up">
+              <h4>Sonar</h4>
+              <p>Consultoria em gestão empresarial by Renata Bertele. Práticas de GRC e ESG.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    padding: 12rem 0 6rem 0;
+    background: radial-gradient(circle at center, #1e3b2a 0%, #122119 100%);
+    color: #fff;
+  }
+  .page-header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .accent { color: var(--color-accent); }
+  .subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+  
+  .section-padding { padding: 6rem 0; }
+  .text-center { text-align: center; }
+  .mb-4 { margin-bottom: 2rem; }
+  .mb-5 { margin-bottom: 3rem; }
+  .mt-5 { margin-top: 4rem; }
+  .bg-dark { background-color: var(--color-primary); }
+  .bg-light { background-color: #f5f3eb; }
+  .text-light { color: var(--color-text-light); }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .result-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(196, 154, 69, 0.2);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .result-card .number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+  .result-card p {
+    color: var(--color-text-light);
+    opacity: 0.9;
+  }
+
+  .result-highlight {
+    grid-column: 1 / -1;
+    background: rgba(255,255,255,0.1);
+    padding: 3rem;
+    margin-top: 2rem;
+  }
+  .result-highlight h3 {
+    color: var(--color-accent);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .result-highlight ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .result-highlight li {
+    color: #fff;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.4;
+  }
+  .result-highlight li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+  }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .sector-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--color-accent);
+  }
+  .sector-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .client-logo {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .partner-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  }
+  .partner-card h4 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .partner-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof (window as any).gsap !== 'undefined') {
+      const gsap = (window as any).gsap;
+      
+      gsap.from(".gsap-reveal", { y: 50, opacity: 0, duration: 1, ease: "power3.out" });
+      gsap.from(".gsap-reveal-delay", { y: 50, opacity: 0, duration: 1, delay: 0.3, ease: "power3.out" });
+
+      gsap.utils.toArray('.gsap-fade-up').forEach((elem: any) => {
+        gsap.from(elem, {
+          scrollTrigger: { trigger: elem, start: "top bottom-=50" },
+          y: 40, opacity: 0, duration: 0.8, ease: "power2.out"
+        });
+      });
+
+      gsap.from('.gsap-fade', {
+        scrollTrigger: { trigger: '.gsap-fade', start: "top bottom-=100" },
+        opacity: 0, duration: 1
+      });
+    }
+  });
+</script>

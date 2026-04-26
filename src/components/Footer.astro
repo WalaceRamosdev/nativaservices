@@ -1,0 +1,100 @@
+---
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <img src="/images/identidadeVisual/logo.svg" alt="Nativa Service Logo" style="height: 60px; width: auto; margin-bottom: 1rem; filter: brightness(0) invert(1);" />
+      <p class="tagline">Origem que estrutura. Estratégia que perpetua.</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/sobre">A Nativa</a></li>
+        <li><a href="/servicos">Serviços</a></li>
+        <li><a href="/experiencia">Resultados</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><strong>Telefone:</strong> (62) 98142-3960</li>
+        <li><strong>E-mail:</strong> contato@nativaservice.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Dados Cadastrais</h4>
+      <ul>
+        <li>Nativa Service LTDA</li>
+        <li>CNPJ: 65.491.178/0001-28</li>
+        <li>Rua 18, n°464 – Setor Negrinho Carrilho</li>
+        <li>CEP: 76.385-018</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} Nativa Service. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding-top: 5rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  .footer-col h4 {
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .footer-col a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  .footer-col a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+  }
+  .footer-col li {
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .nativa { color: #fff; }
+  .service { color: var(--color-accent); font-weight: 400; }
+  .tagline {
+    opacity: 0.7;
+    font-style: italic;
+  }
+  .footer-bottom {
+    background-color: rgba(0,0,0,0.2);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+</style>

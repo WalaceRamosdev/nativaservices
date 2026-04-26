@@ -1,0 +1,318 @@
+---
+import Layout from '../layouts/Layout.astro';
+// @ts-ignore
+import fs from 'fs';
+
+// Load generated background image
+const imagePath = 'C:\\Users\\HP\\.gemini\\antigravity\\brain\\193c3bfa-4d2e-4f7c-b95a-3b2b95d430e9\\hero_field_background_1777164956963.png';
+let bgImageBase64 = '';
+try {
+  const imageBuffer = fs.readFileSync(imagePath);
+  bgImageBase64 = `data:image/png;base64,${imageBuffer.toString('base64')}`;
+} catch (e) {
+  console.error("Could not load background image", e);
+}
+---
+
+<Layout title="Nativa Service - Governança e Estratégia Ambiental">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg" style={`background-image: linear-gradient(to bottom, rgba(30, 59, 42, 0.7), rgba(18, 33, 25, 0.95)), url('${bgImageBase64}')`}></div>
+      <div class="container hero-content">
+        <h1 class="logo-text gsap-reveal">NATIVA <span class="accent">SERVICE</span></h1>
+        <h2 class="gsap-reveal-delay">Governança e Estratégia Ambiental</h2>
+        <div class="cta-wrapper gsap-reveal-delay-2">
+          <a href="#contato" class="btn">Fale Conosco</a>
+          <a href="#sobre" class="btn btn-outline">Conheça a Nativa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="about section-padding">
+      <div class="container glass-panel about-panel">
+        <h2 class="section-title">A Nativa</h2>
+        <p class="about-text">
+          A NATIVA nasceu da necessidade de tratar a gestão ambiental de forma mais estratégica, estruturada e integrada às decisões das organizações. Em um cenário regulatório cada vez mais complexo, muitas empresas enfrentam desafios para organizar seus processos ambientais, gerir riscos e garantir segurança em suas operações.
+        </p>
+        <p class="about-text">
+          Com abordagem técnica e visão estratégica, a NATIVA integra engenharia florestal, geoprocessamento e gestão regulatória, oferecendo suporte à tomada de decisão e contribuindo para a sustentabilidade e a longevidade dos empreendimentos.
+        </p>
+        <blockquote class="slogan">
+          "Origem que estrutura. Estratégia que perpetua."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pilares de Atuação -->
+    <section id="servicos" class="services section-padding">
+      <div class="container">
+        <h2 class="section-title">Pilares Estratégicos</h2>
+        <div class="grid-services">
+          <!-- Governança -->
+          <div class="service-card glass-panel">
+            <h3>Governança Ambiental</h3>
+            <p>Condução segura e estratégica de obrigações ambientais, promovendo controle e previsibilidade.</p>
+          </div>
+          <!-- ESG -->
+          <div class="service-card glass-panel">
+            <h3>Governança - ESG</h3>
+            <p>Integração das práticas ambientais às estratégias corporativas, com comitês e indicadores ESG.</p>
+          </div>
+          <!-- Estratégia Regulatória -->
+          <div class="service-card glass-panel">
+            <h3>Estratégia Regulatória</h3>
+            <p>Gestão de licenciamento e antecipação de riscos em processos ambientais (LI, LO, LAC).</p>
+          </div>
+          <!-- Estruturação -->
+          <div class="service-card glass-panel">
+            <h3>Estruturação de Processos</h3>
+            <p>Mapeamento e otimização da gestão de rotinas, papéis e condicionantes ambientais.</p>
+          </div>
+          <!-- Inteligência -->
+          <div class="service-card glass-panel">
+            <h3>Inteligência Territorial</h3>
+            <p>Uso de geotecnologia e sensoriamento remoto para análise espacial e apoio à decisão.</p>
+          </div>
+          <!-- Conformidade -->
+          <div class="service-card glass-panel">
+            <h3>Conformidade Ambiental</h3>
+            <p>Auditorias e adequação legal, reduzindo riscos e fortalecendo a segurança regulatória.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="results section-padding bg-dark">
+      <div class="container">
+        <h2 class="section-title text-light">Resultados Entregues</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">451</span>
+            <span class="stat-label">Processos Regularizados</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">R$ 600k+</span>
+            <span class="stat-label">Economia em Multas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1951</span>
+            <span class="stat-label">Requisitos Atendidos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Declarações Entregues</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact section-padding">
+      <div class="container text-center">
+        <h2 class="section-title">Pronto para transformar sua gestão ambiental?</h2>
+        <p class="about-text" style="margin-bottom: 2rem;">Entre em contato com a equipe da Nativa Service e descubra como podemos agregar valor sustentável ao seu negócio.</p>
+        <a href="mailto:contato@nativaservice.com" class="btn">Fale com um Especialista</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Local Styles to make it look premium */
+  .section-padding {
+    padding: 8rem 0;
+  }
+  .bg-dark {
+    background-color: var(--color-primary);
+  }
+  .text-light {
+    color: var(--color-text-light);
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Premium dark gradient + image */
+    background: radial-gradient(circle at center, #1e3b2a 0%, #122119 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+  .hero-content {
+    text-align: center;
+    color: var(--color-text-light);
+  }
+  .logo-text {
+    font-size: 5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+  .accent {
+    color: var(--color-accent);
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+  }
+  .cta-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  /* About */
+  .about-panel {
+    padding: 4rem;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+  .bg-dark .section-title {
+    color: var(--color-text-light);
+  }
+  .about-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    color: #444;
+  }
+  .slogan {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: 3rem;
+    font-style: italic;
+  }
+
+  /* Services Grid */
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  .service-card {
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  }
+  .service-card h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .service-card p {
+    color: #555;
+    font-size: 1rem;
+  }
+
+  /* Results */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .stat-label {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .logo-text { font-size: 2.8rem; }
+    .hero h2 { font-size: 1.2rem; margin-bottom: 2rem; }
+    .cta-wrapper { flex-direction: column; gap: 1rem; align-items: stretch; }
+    .section-padding { padding: 4rem 0; }
+    .about-panel { padding: 2rem 1.5rem; }
+    .section-title { font-size: 2rem; }
+    .slogan { font-size: 1.3rem; margin-top: 2rem; }
+    .stat-number { font-size: 2.8rem; }
+  }
+</style>
+
+<script>
+  // Setup GSAP Animations
+  document.addEventListener("DOMContentLoaded", () => {
+    // The gsap global is injected via is:inline from the CDN in Layout.astro
+    if (typeof (window as any).gsap !== 'undefined') {
+      const gsap = (window as any).gsap;
+      
+      gsap.from(".gsap-reveal", { y: 50, opacity: 0, duration: 1, ease: "power3.out" });
+      gsap.from(".gsap-reveal-delay", { y: 50, opacity: 0, duration: 1, delay: 0.3, ease: "power3.out" });
+      gsap.from(".gsap-reveal-delay-2", { y: 50, opacity: 0, duration: 1, delay: 0.6, ease: "power3.out" });
+
+      // Scroll animations
+      gsap.utils.toArray('.service-card').forEach((card: any, i: number) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom-=100",
+            toggleActions: "play none none reverse"
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          delay: (i % 3) * 0.1, // staggering based on row position
+          ease: "power2.out"
+        });
+      });
+
+      gsap.from('.about-panel', {
+        scrollTrigger: {
+          trigger: '.about-panel',
+          start: "top bottom-=150",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      });
+      
+      gsap.from('.stat-item', {
+        scrollTrigger: {
+          trigger: '.stats-grid',
+          start: "top bottom-=100",
+        },
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+    }
+  });
+</script>
