@@ -29,8 +29,8 @@
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(18, 33, 25, 0.5) 0%,
-      rgba(18, 33, 25, 0.95) 100%
+      rgba(18, 33, 25, 0.4) 0%,
+      rgba(18, 33, 25, 0.9) 100%
     );
   }
 </style>
@@ -43,36 +43,77 @@
     if (!ctx) return;
 
     let particles: Particle[] = [];
-    const particleCount = 60;
-    const colors = ['#C49A45', '#1E3B2A', '#D4AF37', '#2D5A3F'];
+    const particleCount = 80;
+    const connectionDistance = 150;
+    const mouseRepulsionRadius = 150;
+    const colors = ['#C49A45', '#D4AF37', '#2D5A3F', '#F5F3EB'];
+
+    const mouse = {
+      x: -1000,
+      y: -1000,
+      radius: mouseRepulsionRadius
+    };
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    });
 
     class Particle {
       x: number;
       y: number;
+      baseX: number;
+      baseY: number;
       size: number;
-      speedX: number;
-      speedY: number;
+      vx: number;
+      vy: number;
       color: string;
       opacity: number;
 
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
+        this.baseX = this.x;
+        this.baseY = this.y;
+        this.size = Math.random() * 2 + 1;
+        this.vx = Math.random() * 1 - 0.5;
+        this.vy = Math.random() * 1 - 0.5;
         this.color = colors[Math.floor(Math.random() * colors.length)];
-        this.opacity = Math.random() * 0.5 + 0.2;
+        this.opacity = Math.random() * 0.5 + 0.3;
       }
 
       update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
+        // Natural movement
+        this.x += this.vx;
+        this.y += this.vy;
 
+        // Boundaries
         if (this.x > canvas.width) this.x = 0;
         if (this.x < 0) this.x = canvas.width;
         if (this.y > canvas.height) this.y = 0;
         if (this.y < 0) this.y = canvas.height;
+
+        // Mouse repulsion logic
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < mouse.radius) {
+            const forceDirectionX = dx / distance;
+            const forceDirectionY = dy / distance;
+            const force = (mouse.radius - distance) / mouse.radius;
+            const directionX = forceDirectionX * force * 5;
+            const directionY = forceDirectionY * force * 5;
+            
+            this.x -= directionX;
+            this.y -= directionY;
+        }
       }
 
       draw() {
@@ -82,6 +123,27 @@
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+      }
+    }
+
+    function drawLines() {
+      if (!ctx) return;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < connectionDistance) {
+            ctx.globalAlpha = 1 - (distance / connectionDistance);
+            ctx.strokeStyle = '#C49A45'; // Gold connections
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
       }
     }
 
@@ -97,12 +159,14 @@
         p.update();
         p.draw();
       });
+      drawLines();
       requestAnimationFrame(animate);
     }
 
     window.addEventListener('resize', resize);
     resize();
 
+    particles = [];
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
@@ -110,7 +174,7 @@
     animate();
   }
 
-  // Initialize on load and on view transitions if any
+  // Initialize
   initParticles();
   document.addEventListener('astro:after-swap', initParticles);
 </script>
