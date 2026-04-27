@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroAnimation from '../components/HeroAnimation.astro';
 ---
 
 <Layout title="Sobre a Nativa Service">
   <div class="page-header">
+    <HeroAnimation />
     <div class="container text-center">
       <h1 class="gsap-reveal">A <span class="accent">Nativa</span></h1>
       <p class="subtitle gsap-reveal-delay">Origem que estrutura. Estratégia que perpetua.</p>
@@ -118,10 +120,9 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .page-header {
+    position: relative;
     padding: 12rem 0 6rem 0;
-    background: linear-gradient(to bottom, rgba(30, 59, 42, 0.7), rgba(18, 33, 25, 0.95)), url('/images/sobre_hero_bg.png');
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
     color: #fff;
   }
   .page-header h1 {
