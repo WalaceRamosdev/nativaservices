@@ -148,7 +148,7 @@ Empresas que já confiam na governança e estratégia ambiental da Nativa Servic
 - **POWER Manutenção**
 - **FAZENDA BELA VISTA**
 
-## 9. Nossos Parceiros
+## 9. Nossas Parceirias
 - **Mayne Veronesi:** Engenheira Ambiental e Sanitarista, Engenheira de Segurança do Trabalho, Mestre em Tecnologia, Ambiente e Sociedade.
 - **AG mapa:** Empresa especializada em Agrimensura, Geoprocessamento e Levantamentos topográficos.
 - **Sonar (by Renata Bertele):** Consultoria em gestão empresarial, Práticas de GRC e ESG.
