@@ -92,13 +92,16 @@ import HeroAnimation from '../components/HeroAnimation.astro';
           <h3 class="mb-4" style="color: var(--color-accent); text-align: center;">Nossos Clientes</h3>
           <div class="clients-list gsap-fade">
             <div class="client-logo">
-              <img src="/images/clientes/image.png" alt="Cliente 1" class="client-img" />
+              <img src="/images/clientes/crvIndustrial.webp" alt="CRV Industrial" class="client-img" />
             </div>
             <div class="client-logo">
-              <img src="/images/clientes/image copy.png" alt="POWER Manutenção" class="client-img" />
+              <img src="/images/clientes/jll.webp" alt="JLL" class="client-img" />
             </div>
             <div class="client-logo">
-              <img src="/images/clientes/image copy 2.png" alt="Fazenda Bela Vista" class="client-img" />
+              <img src="/images/clientes/fazendaBelaVista.webp" alt="Fazenda Bela Vista" class="client-img" />
+            </div>
+            <div class="client-logo">
+              <img src="/images/clientes/powerManutencao.webp" alt="POWER Manutenção" class="client-img" />
             </div>
           </div>
         </div>
@@ -274,23 +277,37 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: center;
   }
   .client-logo {
+    width: 220px;
+    height: 110px;
     background: #fff;
-    padding: 1.5rem 2.5rem;
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0,0,0,0.03);
   }
   .client-img {
-    height: 60px;
-    width: auto;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    mix-blend-mode: multiply; /* Helps remove white backgrounds if any */
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: filter 0.4s ease, opacity 0.4s ease;
+  }
+  .client-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  .client-logo:hover .client-img {
+    filter: grayscale(0%);
+    opacity: 1;
   }
 
   .partners-grid {
