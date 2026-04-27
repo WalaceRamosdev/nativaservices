@@ -1,0 +1,154 @@
+---
+---
+<section id="servicos" class="services-section section-padding bg-dark text-light">
+  <div class="container">
+    <h2 class="section-title text-light">Pilares Estratégicos</h2>
+    <p class="section-subtitle text-center">A atuação da consultoria está estruturada em seis pilares estratégicos</p>
+    
+    <div class="grid-services mt-5">
+      <!-- Governança -->
+      <div class="service-card glass-panel-dark gsap-fade-up">
+        <div class="service-icon">⚖️</div>
+        <h3>Governança Ambiental</h3>
+        <p>Condução segura de obrigações, promovendo controle e previsibilidade regulatória.</p>
+        <div class="service-details-mini">
+            <ul>
+                <li>Gestão de riscos regulatórios</li>
+                <li>Monitoramento de indicadores</li>
+                <li>Controle de condicionantes</li>
+            </ul>
+        </div>
+      </div>
+      <!-- ESG -->
+      <div class="service-card glass-panel-dark gsap-fade-up">
+         <div class="service-icon">🌱</div>
+        <h3>Governança - ESG</h3>
+        <p>Integração de práticas ambientais às estratégias corporativas e reportes.</p>
+        <div class="service-details-mini">
+            <ul>
+                <li>Comitês e comissões ESG</li>
+                <li>Reportes CDP, ISE B3</li>
+                <li>Estratégia GRI e SASB</li>
+            </ul>
+        </div>
+      </div>
+      <!-- Regulatória -->
+      <div class="service-card glass-panel-dark gsap-fade-up">
+         <div class="service-icon">📜</div>
+        <h3>Estratégia Regulatória</h3>
+        <p>Gestão de licenciamento (LI, LO, LAC) e antecipação de riscos em processos.</p>
+        <div class="service-details-mini">
+            <ul>
+                <li>Planejamento regulatório</li>
+                <li>Interação com órgãos</li>
+                <li>ASV, LAU, CAI e Outorgas</li>
+            </ul>
+        </div>
+      </div>
+      <!-- Processos -->
+      <div class="service-card glass-panel-dark gsap-fade-up">
+         <div class="service-icon">⚙️</div>
+        <h3>Estruturação de Processos</h3>
+        <p>Otimização de rotinas, papéis e condicionantes para eficiência operacional.</p>
+        <div class="service-details-mini">
+            <ul>
+                <li>Mapeamento de processos</li>
+                <li>Padronização de rotinas</li>
+                <li>Organização de dados</li>
+            </ul>
+        </div>
+      </div>
+      <!-- Inteligência -->
+      <div class="service-card glass-panel-dark gsap-fade-up">
+         <div class="service-icon">🌍</div>
+        <h3>Inteligência Territorial</h3>
+        <p>Uso de geotecnologia e sensoriamento remoto para análise estratégica.</p>
+        <div class="service-details-mini">
+            <ul>
+                <li>Análise territorial estratégica</li>
+                <li>Mapeamento geoespacial</li>
+                <li>Análise de restrições</li>
+            </ul>
+        </div>
+      </div>
+      <!-- Conformidade -->
+      <div class="service-card glass-panel-dark gsap-fade-up">
+         <div class="service-icon">✅</div>
+        <h3>Conformidade Ambiental</h3>
+        <p>Auditorias e adequação legal, fortalecendo a segurança jurídica do negócio.</p>
+        <div class="service-details-mini">
+            <ul>
+                <li>Diagnóstico de conformidade</li>
+                <li>Auditorias ambientais</li>
+                <li>Planos de adequação</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-padding { padding: 8rem 0; }
+  .bg-dark { 
+    background-color: var(--color-primary); 
+    background-image: linear-gradient(to bottom, rgba(30, 59, 42, 0.95), rgba(30, 59, 42, 0.95)), url('/images/img3.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .text-light { color: var(--color-text-light); }
+  .section-title { font-size: 3rem; margin-bottom: 1rem; color: var(--color-accent); text-align: center; }
+  .section-subtitle { font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto; text-align: center; }
+  .mt-5 { margin-top: 5rem; }
+
+  .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+  
+  .glass-panel-dark {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-panel-dark:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+  .service-card h3 { color: var(--color-accent); margin-bottom: 1rem; font-size: 1.6rem; }
+  .service-card p { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2rem; min-height: 4.8rem; }
+  
+  .service-details-mini {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+  }
+  .service-details-mini ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+  }
+  .service-details-mini li {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+  }
+  .service-details-mini li::before {
+      content: '→';
+      color: var(--color-accent);
+      font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .section-title { font-size: 2.2rem; }
+    .grid-services { grid-template-columns: 1fr; }
+  }
+</style>

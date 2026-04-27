@@ -1,0 +1,75 @@
+---
+---
+<section id="contato" class="contact-section section-padding bg-dark text-light">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info gsap-fade-up">
+        <h2 class="section-title text-light" style="text-align: left;">Vamos Conversar?</h2>
+        <p class="mb-5 opacity-80">Pronto para transformar sua gestão ambiental com estratégia e segurança.</p>
+        
+        <div class="info-items">
+            <div class="info-item">
+               <strong>WhatsApp:</strong>
+               <a href="tel:+5562981423960">(62) 98142-3960</a>
+            </div>
+            <div class="info-item">
+               <strong>E-mail:</strong>
+               <a href="mailto:contato@nativaservice.com">contato@nativaservice.com</a>
+            </div>
+            <div class="info-item">
+               <strong>Localização:</strong>
+               <p>Goianésia - GO | Atendimento Nacional</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card glass-panel-dark gsap-fade-up">
+        <form onsubmit="event.preventDefault(); alert('Mensagem enviada! Entraremos em contato em breve.');">
+          <div class="form-group">
+            <input type="text" placeholder="Seu Nome" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="E-mail Corporativo" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Como podemos ajudar?" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-block">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-padding { padding: 8rem 0; }
+  .bg-dark { 
+    background-color: var(--color-primary); 
+    background-image: linear-gradient(to bottom, rgba(30, 59, 42, 0.9), rgba(30, 59, 42, 0.9)), url('/images/img3.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .text-light { color: var(--color-text-light); }
+  .section-title { font-size: 3.5rem; margin-bottom: 2rem; color: var(--color-accent); }
+  .mb-5 { margin-bottom: 3rem; }
+  .opacity-80 { opacity: 0.8; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .info-item { margin-bottom: 2rem; }
+  .info-item strong { display: block; color: var(--color-accent); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .info-item a, .info-item p { color: #fff; text-decoration: none; font-size: 1.3rem; }
+  
+  .contact-form-card { padding: 4rem; background: rgba(255,255,255,0.03); backdrop-filter: blur(15px); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); }
+  .form-group { margin-bottom: 1.5rem; }
+  .form-group input, .form-group textarea { 
+    width: 100%; padding: 1.2rem; background: rgba(255,255,255,0.05); 
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; 
+  }
+  .btn-block { width: 100%; }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .section-title { font-size: 2.5rem; text-align: center; }
+    .contact-info { text-align: center; }
+  }
+</style>

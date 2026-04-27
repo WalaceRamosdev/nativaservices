@@ -1,0 +1,96 @@
+---
+---
+<section id="sobre" class="about section-padding">
+  <div class="container">
+    <div class="glass-panel about-panel gsap-reveal-up">
+      <h2 class="section-title">A Nativa</h2>
+      <p class="about-text">
+        A NATIVA nasceu da necessidade de tratar a gestão ambiental de forma
+        mais estratégica, estruturada e integrada às decisões das
+        organizações. Em um cenário regulatório cada vez mais complexo, integramos engenharia
+        florestal, geoprocessamento e gestão regulatória para garantir segurança e longevidade aos empreendimentos.
+      </p>
+      <blockquote class="slogan">
+        "Origem que estrutura. Estratégia que perpetua."
+      </blockquote>
+    </div>
+
+    <!-- Perfil Paula Riselly -->
+    <div class="team-summary glass-panel mt-5 gsap-reveal-up">
+       <div class="team-grid-simple">
+          <div class="team-img">
+            <img src="/images/profissional/ChatGPT%20Image%2025%20de%20abr.%20de%202026,%2021_59_20.png" alt="Paula Riselly" />
+          </div>
+          <div class="team-info">
+            <h3>Paula Riselly C. de Oliveira</h3>
+            <p class="role">Engenheira Florestal | Especialista em Geotecnia</p>
+            <div class="bio-container">
+              <p>Profissional com 8 anos de experiência em Sustentabilidade, ESG e Gestão Ambiental, com forte foco em governança ambiental e conformidade regulatória.</p>
+              <div class="bio-extra" id="bio-extra">
+                <p>Ao longo de sua trajetória, liderou a regularização de mais de 440 processos ambientais, focando na redução de passivos e ganhos de eficiência operacional para grandes operações industriais e agroindustriais.</p>
+                <p>Possui vasta experiência na gestão de indicadores ESG e reportes corporativos (CDP, ISE B3), além de sólida atuação em geoprocessamento aplicado ao planejamento territorial e segurança regulatória.</p>
+                <p>Sua atuação integra engenharia florestal e visão estratégica para apoiar organizações no fortalecimento da governança e na geração de valor sustentável para os negócios.</p>
+              </div>
+              <button class="btn-link" id="toggle-bio">Ver biografia completa +</button>
+            </div>
+          </div>
+       </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-padding { padding: 8rem 0; }
+  .about-panel { padding: 4rem; text-align: center; }
+  .section-title { font-size: 3rem; margin-bottom: 2rem; color: var(--color-primary); text-align: center; }
+  .about-text { font-size: 1.25rem; max-width: 900px; margin: 0 auto 1.5rem; color: #444; line-height: 1.6; }
+  .slogan { font-size: 2rem; font-weight: 600; color: var(--color-accent); margin-top: 3rem; font-style: italic; }
+  .mt-5 { margin-top: 5rem; }
+
+  .team-summary { padding: 3rem; }
+  .team-grid-simple { display: grid; grid-template-columns: 150px 1fr; gap: 3rem; align-items: center; }
+  .team-img img { width: 100%; border-radius: 50%; border: 3px solid var(--color-accent); }
+  .team-info h3 { color: var(--color-primary); margin-bottom: 0.5rem; }
+  .role { color: var(--color-accent); font-weight: 600; margin-bottom: 1rem; }
+  
+  .bio-container p { margin-bottom: 0.8rem; line-height: 1.5; color: #444; }
+  .bio-extra { 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    opacity: 0;
+  }
+  .bio-extra.expanded { 
+    max-height: 500px; 
+    opacity: 1;
+    margin-bottom: 1rem;
+  }
+  .btn-link { 
+    background: none; border: none; color: var(--color-accent); 
+    font-weight: 600; cursor: pointer; padding: 0; font-size: 0.95rem;
+    transition: opacity 0.3s;
+  }
+  .btn-link:hover { opacity: 0.8; }
+
+  @media (max-width: 900px) {
+    .section-title { font-size: 2.2rem; }
+    .about-text { font-size: 1.1rem; }
+    .team-grid-simple { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .team-img { width: 120px; margin: 0 auto; }
+  }
+</style>
+
+<script>
+  const initBio = () => {
+    const toggleBio = document.getElementById('toggle-bio');
+    const bioExtra = document.getElementById('bio-extra');
+    if (toggleBio && bioExtra) {
+      toggleBio.addEventListener('click', () => {
+        const isExpanded = bioExtra.classList.toggle('expanded');
+        toggleBio.textContent = isExpanded ? 'Ver menos -' : 'Ver biografia completa +';
+      });
+    }
+  };
+  initBio();
+  document.addEventListener('astro:after-swap', initBio);
+</script>
