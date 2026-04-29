@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroAnimation from '../components/HeroAnimation.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Nossa Experiência | Nativa Service">
   <div class="page-header">
-    <HeroAnimation />
+    <div class="header-bg"></div>
+    <div class="header-overlay"></div>
     <div class="container text-center">
       <h1 class="gsap-reveal">Nossa <span class="accent">Experiência</span></h1>
       <p class="subtitle gsap-reveal-delay">Resultados entregues, setores de atuação e parcerias estratégicas.</p>
@@ -25,11 +26,11 @@ import HeroAnimation from '../components/HeroAnimation.astro';
         </div>
         <div class="result-card gsap-fade-up">
           <div class="number">100+</div>
-          <p>Entrega de declarações, 50 autorizações ambientais e 31 licenças de complexidade alta</p>
+          <p>Declarações e Autorizações entregues</p>
         </div>
         <div class="result-card gsap-fade-up">
           <div class="number">1951</div>
-          <p>Atendimentos a requisitos obrigatórios no Iusnatura</p>
+          <p>Requisitos atendidos no Iusnatura</p>
         </div>
         <div class="result-card gsap-fade-up">
           <div class="number">R$ 600k</div>
@@ -145,6 +146,32 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     padding: 12rem 0 6rem 0;
     overflow: hidden;
     color: #fff;
+    background-color: var(--color-primary);
+  }
+  .header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/hero-experiencia.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(18, 33, 25, 0.6) 0%, rgba(18, 33, 25, 0.9) 100%);
+    z-index: 1;
+  }
+  .page-header .container {
+    position: relative;
+    z-index: 2;
   }
   .page-header h1 {
     font-size: 4rem;

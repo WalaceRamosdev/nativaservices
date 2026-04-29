@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroAnimation from '../components/HeroAnimation.astro';
+import Layout from "../layouts/Layout.astro";
+import HeroAnimation from "../components/HeroAnimation.astro";
 ---
 
 <Layout title="Contato | Nativa Service">
@@ -8,19 +8,24 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     <HeroAnimation />
     <div class="container text-center">
       <h1 class="gsap-reveal">Fale <span class="accent">Conosco</span></h1>
-      <p class="subtitle gsap-reveal-delay">Estamos prontos para impulsionar a gestão ambiental da sua empresa.</p>
+      <p class="subtitle gsap-reveal-delay">
+        Estamos prontos para impulsionar a gestão ambiental da sua empresa.
+      </p>
     </div>
   </div>
 
   <section class="section-padding">
     <div class="container">
       <div class="contact-wrapper">
-        
         <div class="contact-info gsap-fade-up">
           <div class="info-card glass-panel">
             <h3>Informações de Contato</h3>
-            <p>Entre em contato com nossos especialistas e descubra como as soluções da Nativa Service podem agregar valor e segurança regulatória ao seu negócio.</p>
-            
+            <p>
+              Entre em contato com nossos especialistas e descubra como as
+              soluções da Nativa Service podem agregar valor e segurança
+              regulatória ao seu negócio.
+            </p>
+
             <ul class="info-list">
               <li>
                 <strong>Telefone / WhatsApp:</strong>
@@ -28,44 +33,63 @@ import HeroAnimation from '../components/HeroAnimation.astro';
               </li>
               <li>
                 <strong>E-mail:</strong>
-                <a href="mailto:contato@nativaservice.com">contato@nativaservice.com</a>
+                <a href="mailto:contato@nativaservice.com"
+                  >contato@nativaservice.com</a
+                >
               </li>
             </ul>
 
             <h3 class="mt-4">Endereço Administrativo</h3>
-            <p>Nativa Service LTDA<br>CNPJ: 65.491.178/0001-28</p>
-            <p>Rua 18, n°464 – Setor Negrinho Carrilho.<br>CEP: 76.385-018</p>
+            <p>Nativa Service LTDA<br />CNPJ: 65.491.178/0001-28</p>
+            <p>Rua 18, n°464 – Setor Negrinho Carrilho.<br />CEP: 76.385-018</p>
           </div>
         </div>
 
         <div class="contact-form-wrap gsap-fade-up">
-          <form class="glass-panel contact-form" onsubmit="event.preventDefault(); alert('Formulário enviado com sucesso!');">
+          <form
+            class="glass-panel contact-form"
+            onsubmit="event.preventDefault(); alert('Formulário enviado com sucesso!');"
+          >
             <h3>Envie uma mensagem</h3>
-            
+
             <div class="form-group">
               <label for="name">Nome Completo</label>
               <input type="text" id="name" required placeholder="Seu nome" />
             </div>
-            
+
             <div class="form-group">
               <label for="email">E-mail Corporativo</label>
-              <input type="email" id="email" required placeholder="seu@email.com" />
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="seu@email.com"
+              />
             </div>
-            
+
             <div class="form-group">
               <label for="company">Empresa</label>
-              <input type="text" id="company" placeholder="Nome da sua empresa" />
+              <input
+                type="text"
+                id="company"
+                placeholder="Nome da sua empresa"
+              />
             </div>
-            
+
             <div class="form-group">
               <label for="message">Mensagem</label>
-              <textarea id="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
+              <textarea
+                id="message"
+                rows="5"
+                required
+                placeholder="Como podemos ajudar?"></textarea>
             </div>
-            
-            <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+
+            <button type="submit" class="btn" style="width: 100%;"
+              >Enviar Mensagem</button
+            >
           </form>
         </div>
-
       </div>
     </div>
   </section>
@@ -82,16 +106,24 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     font-size: 4rem;
     margin-bottom: 1rem;
   }
-  .accent { color: var(--color-accent); }
+  .accent {
+    color: var(--color-accent);
+  }
   .subtitle {
     font-size: 1.5rem;
     font-style: italic;
     opacity: 0.9;
   }
-  
-  .section-padding { padding: 6rem 0; }
-  .text-center { text-align: center; }
-  .mt-4 { margin-top: 2.5rem; }
+
+  .section-padding {
+    padding: 6rem 0;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .mt-4 {
+    margin-top: 2.5rem;
+  }
 
   .contact-wrapper {
     display: grid;
@@ -117,10 +149,10 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     margin-bottom: 1.5rem;
   }
   .info-card p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1.5rem;
   }
-  
+
   .info-list {
     list-style: none;
     margin-top: 2rem;
@@ -153,7 +185,7 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
-  
+
   .form-group {
     margin-bottom: 1.5rem;
   }
@@ -167,11 +199,13 @@ import HeroAnimation from '../components/HeroAnimation.astro';
   .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
   }
   .form-group input:focus,
   .form-group textarea:focus {
@@ -183,16 +217,31 @@ import HeroAnimation from '../components/HeroAnimation.astro';
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    if (typeof (window as any).gsap !== 'undefined') {
+    if (typeof (window as any).gsap !== "undefined") {
       const gsap = (window as any).gsap;
-      
-      gsap.from(".gsap-reveal", { y: 50, opacity: 0, duration: 1, ease: "power3.out" });
-      gsap.from(".gsap-reveal-delay", { y: 50, opacity: 0, duration: 1, delay: 0.3, ease: "power3.out" });
 
-      gsap.utils.toArray('.gsap-fade-up').forEach((elem: any, i: number) => {
+      gsap.from(".gsap-reveal", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+      gsap.from(".gsap-reveal-delay", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power3.out",
+      });
+
+      gsap.utils.toArray(".gsap-fade-up").forEach((elem: any, i: number) => {
         gsap.from(elem, {
           scrollTrigger: { trigger: elem, start: "top bottom-=50" },
-          y: 50, opacity: 0, duration: 0.8, delay: i * 0.2, ease: "power2.out"
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          delay: i * 0.2,
+          ease: "power2.out",
         });
       });
     }
