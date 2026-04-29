@@ -176,8 +176,13 @@ import Layout from "../layouts/Layout.astro";
     background-color: #122119; /* Fallback dark green */
     background-image: url("/images/identidadeVisual/heroImage-nativaService.jpeg");
     background-size: cover;
-    background-position: center -800px; 
+    background-position: center; /* Bom para mobile */
     z-index: -2;
+  }
+  @media (min-width: 992px) {
+    .hero-bg-image {
+      background-position: center -800px; /* Ajuste aqui para Desktop */
+    }
   }
   .hero-bg {
     position: absolute;
