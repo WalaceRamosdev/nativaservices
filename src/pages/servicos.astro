@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Layout from '../layouts/Layout.astro';
+import HeroAnimation from '../components/HeroAnimation.astro';
 ---
 
 <Layout title="Serviços | Nativa Service">
   <div class="page-header">
-    <div class="header-bg"></div>
-    <div class="header-overlay"></div>
+    <HeroAnimation />
     <div class="container text-center">
       <h1 class="gsap-reveal">Nossos <span class="accent">Serviços</span></h1>
       <p class="subtitle gsap-reveal-delay">Como podemos contribuir para o seu negócio</p>
@@ -18,11 +17,18 @@ import Layout from '../layouts/Layout.astro';
       <div class="services-wrapper">
         
         <!-- Pillar 1 -->
-        <div class="service-detail glass-panel gsap-service">
-          <div class="service-header">
+        <div class="service-detail glass-panel gsap-service" 
+             data-service="governanca-ambiental"
+             data-title="Governança Ambiental"
+             data-image="/images/servicos/governanca_ambiental_detail_1777509565752.png">
+          <div class="service-icon-container">
+            <div class="service-main-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
             <h2>Governança Ambiental</h2>
+            <button class="btn-more">Saiba mais +</button>
           </div>
-          <div class="service-body">
+          <div class="service-full-content" style="display:none">
             <p class="intro">Na NATIVA, a Governança Ambiental é estruturada para apoiar as organizações na condução segura e estratégica de suas obrigações ambientais, promovendo maior controle, previsibilidade regulatória e eficiência na gestão ambiental.</p>
             <h4>Principais entregas:</h4>
             <ul>
@@ -35,11 +41,18 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Pillar 2 -->
-        <div class="service-detail glass-panel gsap-service">
-          <div class="service-header">
+        <div class="service-detail glass-panel gsap-service"
+             data-service="esg"
+             data-title="Governança - ESG"
+             data-image="/images/servicos/esg_detail_1777509584883.png">
+          <div class="service-icon-container">
+            <div class="service-main-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
             <h2>Governança - ESG</h2>
+            <button class="btn-more">Saiba mais +</button>
           </div>
-          <div class="service-body">
+          <div class="service-full-content" style="display:none">
             <p class="intro">Temos como objetivo estruturar e fortalecer a gestão da agenda ESG nas organizações, promovendo maior transparência, gestão de riscos e integração das práticas ambientais às estratégias corporativas.</p>
             <h4>Principais entregas:</h4>
             <ul>
@@ -52,11 +65,18 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Pillar 3 -->
-        <div class="service-detail glass-panel gsap-service">
-          <div class="service-header">
+        <div class="service-detail glass-panel gsap-service"
+             data-service="estrategia"
+             data-title="Estratégia Regulatória"
+             data-image="/images/servicos/estrategia_regulatoria_detail_1777509604877.png">
+          <div class="service-icon-container">
+            <div class="service-main-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
             <h2>Estratégia Regulatória</h2>
+            <button class="btn-more">Saiba mais +</button>
           </div>
-          <div class="service-body">
+          <div class="service-full-content" style="display:none">
             <p class="intro">Apoiamos as organizações na condução estruturada de seus processos ambientais, garantindo maior segurança regulatória e previsibilidade na relação com os órgãos ambientais.</p>
             <h4>Principais entregas:</h4>
             <ul>
@@ -66,78 +86,79 @@ import Layout from '../layouts/Layout.astro';
               <li><strong>Interação com órgãos ambientais:</strong> suporte técnico nas tratativas;</li>
               <li><strong>Antecipação de riscos regulatórios:</strong> identificação de potenciais riscos.</li>
             </ul>
-            
             <h4 class="mt-4">Tipos de Processos de Licenciamento:</h4>
             <div class="tags-grid">
-              <span class="tag">LI - Instalação</span>
-              <span class="tag">LO - Operação</span>
-              <span class="tag">LAC - Simplificado</span>
-              <span class="tag">LE - Extração</span>
-              <span class="tag">ASV - Supressão Vegetal</span>
-              <span class="tag">LAU - Unificada</span>
-              <span class="tag">CAI - Corte de Árvores</span>
-              <span class="tag">PAE - Emergência</span>
-              <span class="tag">Outorgas</span>
-              <span class="tag">Passivos Ambientais</span>
+              <span class="tag">LI - Instalação</span> <span class="tag">LO - Operação</span> <span class="tag">LAC</span> <span class="tag">ASV</span> <span class="tag">Outorgas</span>
             </div>
           </div>
         </div>
 
         <!-- Pillar 4 -->
-        <div class="service-detail glass-panel gsap-service">
-          <div class="service-header">
+        <div class="service-detail glass-panel gsap-service"
+             data-service="processos"
+             data-title="Estruturação de Processos"
+             data-image="/images/servicos/estruturacao_processos_detail_1777509624400.png">
+          <div class="service-icon-container">
+            <div class="service-main-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+            </div>
             <h2>Estruturação de Processos</h2>
+            <button class="btn-more">Saiba mais +</button>
           </div>
-          <div class="service-body">
+          <div class="service-full-content" style="display:none">
             <p class="intro">Organizamos e fortalecemos a gestão das rotinas ambientais nas organizações, promovendo maior eficiência operacional, controle das obrigações ambientais e suporte à tomada de decisão.</p>
             <h4>Principais entregas:</h4>
             <ul>
               <li>Mapeamento de processos ambientais;</li>
               <li>Estruturação de rotinas e responsabilidades;</li>
-              <li>Definição de papéis, procedimentos e rotinas;</li>
               <li>Gestão e controle de condicionantes ambientais;</li>
-              <li>Padronização de procedimentos ambientais;</li>
-              <li>Organização dos dados ambientais.</li>
+              <li>Padronização de procedimentos ambientais.</li>
             </ul>
           </div>
         </div>
 
         <!-- Pillar 5 -->
-        <div class="service-detail glass-panel gsap-service">
-          <div class="service-header">
+        <div class="service-detail glass-panel gsap-service"
+             data-service="territorial"
+             data-title="Inteligência Territorial"
+             data-image="/images/servicos/inteligencia_territorial_detail_1777509644447.png">
+          <div class="service-icon-container">
+            <div class="service-main-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
             <h2>Inteligência Territorial</h2>
+            <button class="btn-more">Saiba mais +</button>
           </div>
-          <div class="service-body">
+          <div class="service-full-content" style="display:none">
             <p class="intro">Aplicamos técnicas de geoprocessamento, análise espacial e sensoriamento remoto para avaliação de características ambientais e restrições territoriais.</p>
             <h4>Principais entregas:</h4>
             <ul>
               <li>Análise territorial estratégica;</li>
               <li>Mapeamento ambiental e geoespacial;</li>
-              <li>Análise de restrições e riscos territoriais;</li>
-              <li>Monitoramento territorial por processamento de dados espaciais.</li>
+              <li>Análise de restrições e riscos territoriais.</li>
             </ul>
           </div>
         </div>
 
         <!-- Pillar 6 -->
-        <div class="service-detail glass-panel gsap-service">
-          <div class="service-header">
-            <h2>Conformidade Ambiental & Visão Estratégica</h2>
+        <div class="service-detail glass-panel gsap-service"
+             data-service="conformidade"
+             data-title="Conformidade & Visão Estratégica"
+             data-image="/images/servicos/conformidade_detail_1777509666496.png">
+          <div class="service-icon-container">
+            <div class="service-main-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+            </div>
+            <h2>Conformidade & Visão Estratégica</h2>
+            <button class="btn-more">Saiba mais +</button>
           </div>
-          <div class="service-body">
+          <div class="service-full-content" style="display:none">
             <p class="intro">Asseguramos que as organizações atendam às exigências legais, reduzindo riscos e fortalecendo a segurança regulatória.</p>
             <h4>Entregas de Conformidade:</h4>
             <ul>
               <li>Diagnóstico de conformidade ambiental;</li>
               <li>Gestão de requisitos legais;</li>
-              <li>Auditorias ambientais de conformidade;</li>
-              <li>Plano de adequação para não conformidades.</li>
-            </ul>
-            <h4 class="mt-4">Entregas Estratégicas:</h4>
-            <ul>
-              <li>Integração da agenda ambiental à estratégia do negócio;</li>
-              <li>Estruturação de indicadores estratégicos;</li>
-              <li>Avaliação de riscos e oportunidades ambientais.</li>
+              <li>Integração da agenda ambiental à estratégia do negócio.</li>
             </ul>
           </div>
         </div>
@@ -145,6 +166,23 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- Service Modal -->
+  <div id="service-modal" class="service-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container glass-panel">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-image-wrap">
+          <img id="modal-image" src="" alt="Service Detail" />
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <div id="modal-content" class="modal-text-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
@@ -153,32 +191,7 @@ import Layout from '../layouts/Layout.astro';
     padding: 12rem 0 6rem 0;
     overflow: hidden;
     color: #fff;
-    background-color: var(--color-primary);
-  }
-  .header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/hero-servicos.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 0;
-  }
-  .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(18, 33, 25, 0.6) 0%, rgba(18, 33, 25, 0.9) 100%);
-    z-index: 1;
-  }
-  .page-header .container {
-    position: relative;
-    z-index: 2;
+    text-align: center;
   }
   .page-header h1 {
     font-size: 4rem;
@@ -202,36 +215,180 @@ import Layout from '../layouts/Layout.astro';
   }
   
   .service-detail {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 24px;
     overflow: hidden;
   }
-  @media (min-width: 900px) {
-    .service-detail {
-      flex-direction: row;
-    }
-  }
-
-  .service-header {
+  .service-icon-container {
     background: var(--color-primary);
     color: var(--color-text-light);
-    padding: 4rem 3rem;
+    padding: 3rem 2rem;
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
   }
-  .service-header h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    border-left: 5px solid var(--color-accent);
-    padding-left: 1.5rem;
+  .btn-more {
+    background: var(--color-accent);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  .service-detail:hover .btn-more {
+    background: #fff;
+    color: var(--color-primary);
+    transform: scale(1.05);
   }
 
   .service-body {
-    padding: 4rem 3rem;
-    flex: 2;
+    display: none; /* Hidden by default */
+  }
+
+  /* Modal Styles */
+  .service-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 33, 25, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  .modal-container {
+    position: relative;
+    width: 95%;
+    max-width: 1300px;
+    max-height: 90vh;
     background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .modal-close:hover {
+    background: var(--color-accent);
+    transform: rotate(90deg);
+  }
+  .modal-grid {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+  }
+  @media (max-width: 900px) {
+    .modal-grid { flex-direction: column; }
+    .modal-image-wrap { height: 200px; flex-shrink: 0; }
+    .modal-container { 
+      width: 98%;
+      max-height: 95vh; 
+      margin: 0.5rem;
+      border-radius: 24px;
+    }
+    .modal-info {
+      padding: 2rem 1.5rem;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .modal-info h2 {
+      font-size: 1.8rem;
+    }
+  }
+  .modal-image-wrap {
+    flex: 1;
+    background: #eee;
+    overflow: hidden;
+  }
+  .modal-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .modal-info {
+    flex: 1.2;
+    padding: 4rem 3rem;
+    overflow-y: auto;
+    background: #fff;
+  }
+  /* Custom Scrollbar for Modal Info */
+  .modal-info::-webkit-scrollbar {
+    width: 8px;
+  }
+  .modal-info::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  .modal-info::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+  .modal-info::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+  }
+  .modal-info h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+  }
+  .modal-text-content {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .modal-text-content h4 {
+    color: var(--color-primary);
+    margin: 2rem 0 1rem;
+  }
+  .modal-text-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  .modal-text-content li {
+    margin-bottom: 0.8rem;
   }
   .intro {
     font-size: 1.2rem;
@@ -287,6 +444,46 @@ import Layout from '../layouts/Layout.astro';
           y: 50, opacity: 0, duration: 0.8, ease: "power2.out"
         });
       });
+
+      // Modal Logic
+      const modal = document.getElementById('service-modal');
+      const cards = document.querySelectorAll('.service-detail');
+      const closeBtn = document.querySelector('.modal-close');
+      const modalContainer = document.querySelector('.modal-container');
+
+      const openModal = (card: Element) => {
+        const title = card.getAttribute('data-title');
+        const image = card.getAttribute('data-image');
+        const content = card.querySelector('.service-full-content')?.innerHTML;
+
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image') as HTMLImageElement;
+        const modalContent = document.getElementById('modal-content');
+
+        if (modalTitle) modalTitle.textContent = title;
+        if (modalImage && image) modalImage.src = image;
+        if (modalContent && content) modalContent.innerHTML = content;
+
+        if (modal) {
+          modal.style.display = 'flex';
+          gsap.to(modalContainer, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" });
+        }
+      };
+
+      const closeModal = () => {
+        if (modal) {
+          gsap.to(modalContainer, { opacity: 0, y: 30, duration: 0.3, ease: "power3.in", onComplete: () => {
+            modal.style.display = 'none';
+          }});
+        }
+      };
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+      });
+
+      closeBtn?.addEventListener('click', closeModal);
+      modal?.querySelector('.modal-overlay')?.addEventListener('click', closeModal);
     }
   });
 </script>

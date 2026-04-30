@@ -32,6 +32,34 @@ const { title } = Astro.props;
     </main>
     <Footer />
     <WhatsAppButton />
+
+    <!-- Decorative Florals -->
+    <div class="floral-container" aria-hidden="true">
+      <div class="floral floral-1">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 30 30 30 60C30 90 50 100 50 100C50 100 70 90 70 60C70 30 50 0 50 0Z"/></svg>
+      </div>
+      <div class="floral floral-2">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 30 30 30 60C30 90 50 100 50 100C50 100 70 90 70 60C70 30 50 0 50 0Z"/></svg>
+      </div>
+      <div class="floral floral-3">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 20 40 20 70C20 90 40 100 50 100C60 100 80 90 80 70C80 40 50 0 50 0Z"/></svg>
+      </div>
+      <div class="floral floral-4">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 20 40 20 70C20 90 40 100 50 100C60 100 80 90 80 70C80 40 50 0 50 0Z"/></svg>
+      </div>
+      <div class="floral floral-5 accent-floral">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 20 40 20 70C20 90 40 100 50 100C60 100 80 90 80 70C80 40 50 0 50 0Z"/></svg>
+      </div>
+      <div class="floral floral-6">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 30 30 30 60C30 90 50 100 50 100C50 100 70 90 70 60C70 30 50 0 50 0Z"/></svg>
+      </div>
+      <div class="floral floral-7 accent-floral">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 10L60 40C70 30 90 30 80 60C70 80 50 90 50 90C50 90 30 80 20 60C10 30 30 30 40 40L50 10Z"/></svg>
+      </div>
+      <div class="floral floral-8">
+        <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 0C50 0 20 40 20 70C20 90 40 100 50 100C60 100 80 90 80 70C80 40 50 0 50 0Z"/></svg>
+      </div>
+    </div>
     <script is:inline>
       // Initialize Lenis
       const lenis = new Lenis({
@@ -55,6 +83,55 @@ const { title } = Astro.props;
 
       // Initialize ScrollTrigger
       gsap.registerPlugin(ScrollTrigger);
+
+      // Floral Scroll Animation
+      gsap.to(".floral", {
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1.5,
+        },
+        y: (i, target) => {
+          const speed = target.classList.contains('floral-4') ? -300 : -150;
+          return speed;
+        },
+        rotation: (i) => (i % 2 === 0 ? 30 : -30),
+        ease: "none",
+      });
     </script>
+
+    <style is:global>
+      /* Decorative Florals */
+      .floral-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .floral {
+        position: absolute;
+        color: var(--color-primary);
+        opacity: 0.12;
+        width: 150px;
+        height: 150px;
+      }
+      .accent-floral {
+        color: var(--color-accent);
+        opacity: 0.08;
+      }
+      .floral-1 { top: 15%; left: -60px; transform: rotate(45deg); }
+      .floral-2 { top: 75%; right: -60px; transform: rotate(-45deg); }
+      .floral-3 { top: 35%; left: 85%; transform: rotate(120deg); width: 120px; height: 120px; }
+      .floral-4 { top: 90%; left: 10%; transform: rotate(-20deg); width: 220px; height: 220px; }
+      .floral-5 { top: 50%; left: -40px; transform: rotate(15deg); width: 180px; height: 180px; }
+      .floral-6 { top: 25%; right: 5%; transform: rotate(190deg); width: 90px; height: 90px; }
+      .floral-7 { top: 65%; left: 75%; transform: rotate(60deg); width: 130px; height: 130px; }
+      .floral-8 { top: 5%; right: 20%; transform: rotate(-100deg); width: 110px; height: 110px; }
+    </style>
   </body>
 </html>

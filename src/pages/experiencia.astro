@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Layout from '../layouts/Layout.astro';
+import HeroAnimation from '../components/HeroAnimation.astro';
 ---
 
 <Layout title="Nossa Experiência | Nativa Service">
   <div class="page-header">
-    <div class="header-bg"></div>
-    <div class="header-overlay"></div>
+    <HeroAnimation />
     <div class="container text-center">
       <h1 class="gsap-reveal">Nossa <span class="accent">Experiência</span></h1>
       <p class="subtitle gsap-reveal-delay">Resultados entregues, setores de atuação e parcerias estratégicas.</p>
@@ -61,22 +60,37 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="sectors-grid">
         <div class="sector-card gsap-fade-up">
+          <div class="sector-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M2 17h20M3 17V7l4-4v14M7 17V7l4-4v14M11 17V7l4-4v14M15 17V7l4-4v14M19 17V7l4-4v14"></path></svg>
+          </div>
           <h3>Indústria</h3>
           <p>Apoio à gestão ambiental, licenciamento, conformidade regulatória e gestão de riscos ambientais em operações industriais.</p>
         </div>
         <div class="sector-card gsap-fade-up">
+          <div class="sector-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20a1 1 0 0 1-1-1v-5H8l3-7 3 7h-2v5a1 1 0 0 1-1 1z"></path><path d="M12 2v2M5 22h14"></path></svg>
+          </div>
           <h3>Agroindústria</h3>
           <p>Suporte à regularização ambiental, gestão territorial e condução de processos ambientais no setor agroindustrial.</p>
         </div>
         <div class="sector-card gsap-fade-up">
+          <div class="sector-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          </div>
           <h3>Energia</h3>
           <p>Apoio à condução de processos ambientais e gestão regulatória em projetos de geração e infraestrutura energética.</p>
         </div>
         <div class="sector-card gsap-fade-up">
+          <div class="sector-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 7-9-4-9 4V17l9 4 9-4V7z"></path><path d="m12 3v18"></path><path d="m3 7 9 4 9-4"></path></svg>
+          </div>
           <h3>Mineração</h3>
           <p>Suporte técnico na gestão ambiental, atendimento às exigências regulatórias e organização de processos ambientais.</p>
         </div>
         <div class="sector-card gsap-fade-up">
+          <div class="sector-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
           <h3>Infraestrutura</h3>
           <p>Apoio na condução de processos ambientais associados a projetos de infraestrutura e desenvolvimento territorial.</p>
         </div>
@@ -146,32 +160,7 @@ import Layout from '../layouts/Layout.astro';
     padding: 12rem 0 6rem 0;
     overflow: hidden;
     color: #fff;
-    background-color: var(--color-primary);
-  }
-  .header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/hero-experiencia.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 0;
-  }
-  .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(18, 33, 25, 0.6) 0%, rgba(18, 33, 25, 0.9) 100%);
-    z-index: 1;
-  }
-  .page-header .container {
-    position: relative;
-    z-index: 2;
+    text-align: center;
   }
   .page-header h1 {
     font-size: 4rem;
@@ -357,7 +346,7 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
     gap: 2.5rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
   }
   .sector-card {
     background: #fff;
@@ -372,6 +361,30 @@ import Layout from '../layouts/Layout.astro';
     max-width: 380px;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
+    padding-top: 5rem;
+  }
+  .sector-icon {
+    position: absolute;
+    top: -35px;
+    left: 2rem;
+    color: var(--color-accent);
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 3px solid var(--color-primary); /* Verde da identidade visual */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  .sector-card:hover .sector-icon {
+    background: var(--color-accent);
+    color: #fff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(196, 154, 69, 0.3);
   }
   .sector-card:hover {
     transform: translateY(-15px);

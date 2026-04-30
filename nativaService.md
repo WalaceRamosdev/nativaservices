@@ -9,7 +9,8 @@
 ## 2. Seção "Sobre Nós" (A Nativa)
 - **Título:** A Nativa
 - **Texto:**
-  A NATIVA nasceu da necessidade de tratar a gestão ambiental de forma mais estratégica, estruturada e integrada às decisões das organizações. Em um cenário regulatório cada vez mais complexo, muitas empresas enfrentam desafios para organizar seus processos ambientais, gerir riscos e garantir segurança em suas operações.
+  A NATIVA nasceu para transformar desafios ambientais em decisões estratégicas.
+  A Nativa atua com foco em resultad, garantindo segurança regulatória, eficiência operacional e suporte técnico para empresas que precisam avançar com confiança.
 
   A consultoria tem como propósito e missão apoiar organizações na condução qualificada de suas agendas ambientais, promovendo maior segurança regulatória, redução de passivos e eficiência na gestão ambiental.
 
