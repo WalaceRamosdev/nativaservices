@@ -2,24 +2,56 @@
 ---
 <section class="partners-section section-padding">
   <div class="container">
-    <h2 class="section-title">Nossas Parceirias</h2>
-    <p class="section-subtitle text-center">Colaboração estratégica com especialistas renomados</p>
+    <h2 class="section-title">Nossas Parcerias</h2>
+    <p class="section-subtitle text-center">Colaboração estratégica com especialistas renomados e empresas parceiras</p>
     
-    <div class="partners-grid mt-5">
+    <div class="partners-category-title mt-5">Profissionais Especialistas</div>
+    <div class="partners-grid mt-3">
+      <!-- Mayne Veronesi -->
       <div class="partner-card gsap-fade-up">
         <h3>Mayne Veronesi</h3>
-        <p class="role">Eng. Ambiental & Seg. do Trabalho</p>
-        <p class="desc">Mestre em Tecnologia, Ambiente e Sociedade.</p>
+        <p class="role">Engenheira Ambiental e Sanitarista</p>
+        <p class="desc">Engenheira de Segurança do Trabalho, Mestre em Tecnologia, Ambiente e Sociedade.</p>
       </div>
+      <!-- Maurício Bossi -->
+      <div class="partner-card gsap-fade-up">
+        <h3>Maurício Bossi</h3>
+        <p class="role">Engenheiro Civil</p>
+        <p class="desc">Especialista em Gestão Ambiental. CREA: 131834/D.</p>
+      </div>
+      <!-- João Gabriel -->
+      <div class="partner-card gsap-fade-up">
+        <h3>João Gabriel</h3>
+        <p class="role">Engenheiro Geólogo – Geotécnico</p>
+        <p class="desc">Mestre em Geologia Sedimentar, Pós Graduado em Engenharia Ambiental e Doutorando em Geociências.</p>
+      </div>
+    </div>
+
+    <div class="partners-category-title mt-5">Empresas Parceiras</div>
+    <div class="partners-grid mt-3">
+      <!-- AgroAudi -->
+      <div class="partner-card gsap-fade-up">
+        <h3>AgroAudi</h3>
+        <p class="role">Mineração e Gestão Ambiental</p>
+        <p class="desc">Empresa especializada em Mineração e Gestão Ambiental.</p>
+      </div>
+      <!-- AG mapa -->
       <div class="partner-card gsap-fade-up">
         <h3>AG mapa</h3>
         <p class="role">Agrimensura & Geoprocessamento</p>
-        <p class="desc">Especialistas em inteligência territorial.</p>
+        <p class="desc">Empresa especializada em Agrimensura, Geoprocessamento e Levantamentos topográficos.</p>
       </div>
+      <!-- Prevention -->
+      <div class="partner-card gsap-fade-up">
+        <h3>Prevention</h3>
+        <p class="role">Mineração e Gestão Ambiental</p>
+        <p class="desc">Empresa especializada em Mineração e Gestão Ambiental.</p>
+      </div>
+      <!-- Sonar -->
       <div class="partner-card gsap-fade-up">
         <h3>Sonar</h3>
-        <p class="role">Consultoria em Gestão</p>
-        <p class="desc">Referência em GRC e ESG por Renata Bertele.</p>
+        <p class="role">Práticas de GRC e ESG</p>
+        <p class="desc">Consultoria em gestão empresarial por Renata Bertele. Práticas de GRC e ESG.</p>
       </div>
     </div>
   </div>
@@ -30,10 +62,22 @@
   .section-title { font-size: 3rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
   .section-subtitle { font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto; text-align: center; }
   .mt-5 { margin-top: 5rem; }
+  .mt-3 { margin-top: 2rem; }
+  
+  .partners-category-title {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    max-width: 350px;
+    margin: 4rem auto 0 auto;
+  }
 
   .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-  .partner-card { padding: 3rem 2rem; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); text-align: center; }
-  .partner-card h3 { color: var(--color-primary); margin-bottom: 0.5rem; }
+  .partner-card { padding: 3rem 2rem; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .partner-card h3 { color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem; }
   .role { color: var(--color-accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; }
-  .desc { font-size: 0.95rem; color: #666; }
+  .desc { font-size: 0.95rem; color: #666; line-height: 1.5; }
 </style>

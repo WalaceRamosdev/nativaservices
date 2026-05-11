@@ -484,6 +484,22 @@ import HeroAnimation from '../components/HeroAnimation.astro';
 
       closeBtn?.addEventListener('click', closeModal);
       modal?.querySelector('.modal-overlay')?.addEventListener('click', closeModal);
+
+      // Check query parameter or hash to open a service modal automatically on load
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      const hashParam = window.location.hash ? window.location.hash.substring(1) : null;
+      const targetServiceId = serviceParam || hashParam;
+
+      if (targetServiceId) {
+        const targetCard = document.querySelector(`.service-detail[data-service="${targetServiceId}"]`);
+        if (targetCard) {
+          setTimeout(() => {
+            openModal(targetCard);
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 500);
+        }
+      }
     }
   });
 </script>

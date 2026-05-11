@@ -24,18 +24,11 @@ import Layout from "../layouts/Layout.astro";
     <section id="sobre" class="about section-padding">
       <div class="container about-panel">
         <h2 class="section-title">A Nativa</h2>
-        <p class="about-text">
-          A NATIVA nasceu para transformar desafios ambientais em decisões
-          estratégicas. A Nativa atua com foco em resultad, garantindo segurança
-          regulatória, eficiência operacional e suporte técnico para empresas que
-          precisam avançar com confiança.
-        </p>
-        <p class="about-text">
-          Com abordagem técnica e visão estratégica, a NATIVA integra engenharia
-          florestal, geoprocessamento e gestão regulatória, oferecendo suporte à
-          tomada de decisão e contribuindo para a sustentabilidade e a
-          longevidade dos empreendimentos.
-        </p>
+        <div class="about-text">
+          <p>A Nativa nasceu para transformar desafios ambientais em decisões estratégicas. <br>Atuamos com foco em resultado, garantindo segurança regulatória, eficiência operacional e suporte técnico<br>para empresas que precisam avançar com confiança.</p>
+          <p>Nosso compromisso é entregar previsibilidade, redução de riscos e fortalecimento da gestão ambiental, contribuindo para decisões mais seguras, sustentáveis e estratégicas.</p>
+        </div>
+        
         <blockquote class="slogan">
           "Origem que estrutura. Estratégia que perpetua."
         </blockquote>
@@ -48,53 +41,65 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="section-title">Pilares Estratégicos</h2>
         <div class="grid-services">
           <!-- Governança -->
-          <div class="service-card glass-panel">
+          <a href="/servicos?service=governanca-ambiental" class="service-card glass-panel">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
             <h3>Governança Ambiental</h3>
-            <p>
-              Condução segura e estratégica de obrigações ambientais, promovendo
-              controle e previsibilidade.
-            </p>
-          </div>
+            <div class="service-card-footer">
+              <span class="btn-more-card">Saiba mais <span class="arrow">→</span></span>
+            </div>
+          </a>
           <!-- ESG -->
-          <div class="service-card glass-panel">
+          <a href="/servicos?service=esg" class="service-card glass-panel">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
             <h3>Governança - ESG</h3>
-            <p>
-              Integração das práticas ambientais às estratégias corporativas,
-              com comitês e indicadores ESG.
-            </p>
-          </div>
+            <div class="service-card-footer">
+              <span class="btn-more-card">Saiba mais <span class="arrow">→</span></span>
+            </div>
+          </a>
           <!-- Estratégia Regulatória -->
-          <div class="service-card glass-panel">
+          <a href="/servicos?service=estrategia" class="service-card glass-panel">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
             <h3>Estratégia Regulatória</h3>
-            <p>
-              Gestão de licenciamento e antecipação de riscos em processos
-              ambientais (LI, LO, LAC).
-            </p>
-          </div>
+            <div class="service-card-footer">
+              <span class="btn-more-card">Saiba mais <span class="arrow">→</span></span>
+            </div>
+          </a>
           <!-- Estruturação -->
-          <div class="service-card glass-panel">
+          <a href="/servicos?service=processos" class="service-card glass-panel">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+            </div>
             <h3>Estruturação de Processos</h3>
-            <p>
-              Mapeamento e otimização da gestão de rotinas, papéis e
-              condicionantes ambientais.
-            </p>
-          </div>
+            <div class="service-card-footer">
+              <span class="btn-more-card">Saiba mais <span class="arrow">→</span></span>
+            </div>
+          </a>
           <!-- Inteligência -->
-          <div class="service-card glass-panel">
+          <a href="/servicos?service=territorial" class="service-card glass-panel">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
             <h3>Inteligência Territorial</h3>
-            <p>
-              Uso de geotecnologia e sensoriamento remoto para análise espacial
-              e apoio à decisão.
-            </p>
-          </div>
+            <div class="service-card-footer">
+              <span class="btn-more-card">Saiba mais <span class="arrow">→</span></span>
+            </div>
+          </a>
           <!-- Conformidade -->
-          <div class="service-card glass-panel">
+          <a href="/servicos?service=conformidade" class="service-card glass-panel">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+            </div>
             <h3>Conformidade Ambiental</h3>
-            <p>
-              Auditorias e adequação legal, reduzindo riscos e fortalecendo a
-              segurança regulatória.
-            </p>
-          </div>
+            <div class="service-card-footer">
+              <span class="btn-more-card">Saiba mais <span class="arrow">→</span></span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -241,6 +246,12 @@ import Layout from "../layouts/Layout.astro";
     margin: 0 auto 1.5rem auto;
     color: #444;
   }
+  .about-text p {
+    margin-bottom: 1.5rem;
+  }
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
   .slogan {
     font-size: 1.8rem;
     font-weight: 600;
@@ -252,28 +263,81 @@ import Layout from "../layouts/Layout.astro";
   /* Services Grid */
   .grid-services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
   }
   .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 2.5rem;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
+    text-decoration: none;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
   }
   .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-8px);
+    background: #fff;
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(30, 59, 42, 0.08);
+  }
+  .service-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: rgba(30, 59, 42, 0.05);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+  }
+  .service-card:hover .service-icon-wrapper {
+    background: var(--color-primary);
+    color: var(--color-accent);
+    transform: scale(1.05);
   }
   .service-card h3 {
     color: var(--color-primary);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
   }
-  .service-card p {
-    color: #555;
-    font-size: 1rem;
+  .service-card:hover h3 {
+    color: var(--color-accent);
+  }
+  .service-card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+  .btn-more-card {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  .btn-more-card .arrow {
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover .btn-more-card {
+    color: var(--color-primary);
+  }
+  .service-card:hover .btn-more-card .arrow {
+    transform: translateX(4px);
   }
 
   /* Results */
