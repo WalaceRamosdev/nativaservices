@@ -1,0 +1,489 @@
+---
+import '../styles/global.css';
+
+const phoneNumber = "5562981423960";
+const defaultMessage = "Olá! Vim pelo Instagram e gostaria de saber mais sobre a Nativa Service.";
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
+const instagramUrl = "https://www.instagram.com/"; // Can be configured later
+const emailAddress = "contato@nativaservice.com";
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Nativa Service - Conecte-se conosco. Acesse nossos serviços, resultados, whatsapp e site institucional." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/images/identidadeVisual/logo.svg" />
+    <title>Nativa Service | Links Úteis</title>
+  </head>
+  <body class="links-page">
+    <!-- Beautiful Floating Leaf Particles in Background -->
+    <div class="leaf-particles" aria-hidden="true">
+      <div class="leaf leaf-1">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3C11.5 3 7.5 10.5 7.5 10.5S3.5 11.5 2 13c1.5 1 3 1.5 3.5 1.5S7.5 18 8 19c.5.5 1.5 2 3.5.5 1.5-1.5 2.5-5.5 2.5-5.5S21 12.5 21 3z"/></svg>
+      </div>
+      <div class="leaf leaf-2">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3C11.5 3 7.5 10.5 7.5 10.5S3.5 11.5 2 13c1.5 1 3 1.5 3.5 1.5S7.5 18 8 19c.5.5 1.5 2 3.5.5 1.5-1.5 2.5-5.5 2.5-5.5S21 12.5 21 3z"/></svg>
+      </div>
+      <div class="leaf leaf-3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3C11.5 3 7.5 10.5 7.5 10.5S3.5 11.5 2 13c1.5 1 3 1.5 3.5 1.5S7.5 18 8 19c.5.5 1.5 2 3.5.5 1.5-1.5 2.5-5.5 2.5-5.5S21 12.5 21 3z"/></svg>
+      </div>
+      <div class="leaf leaf-4">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3C11.5 3 7.5 10.5 7.5 10.5S3.5 11.5 2 13c1.5 1 3 1.5 3.5 1.5S7.5 18 8 19c.5.5 1.5 2 3.5.5 1.5-1.5 2.5-5.5 2.5-5.5S21 12.5 21 3z"/></svg>
+      </div>
+      <div class="leaf leaf-5">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3C11.5 3 7.5 10.5 7.5 10.5S3.5 11.5 2 13c1.5 1 3 1.5 3.5 1.5S7.5 18 8 19c.5.5 1.5 2 3.5.5 1.5-1.5 2.5-5.5 2.5-5.5S21 12.5 21 3z"/></svg>
+      </div>
+      <div class="leaf leaf-6">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3C11.5 3 7.5 10.5 7.5 10.5S3.5 11.5 2 13c1.5 1 3 1.5 3.5 1.5S7.5 18 8 19c.5.5 1.5 2 3.5.5 1.5-1.5 2.5-5.5 2.5-5.5S21 12.5 21 3z"/></svg>
+      </div>
+    </div>
+
+    <div class="links-container">
+      <!-- Profile Header -->
+      <header class="profile-header">
+        <div class="logo-wrapper">
+          <img src="/images/identidadeVisual/logo.svg" alt="Nativa Service Logo" class="profile-logo" />
+        </div>
+        <h1>Nativa Service</h1>
+        <p class="tagline">Origem que estrutura. Estratégia que perpetua.</p>
+      </header>
+
+      <!-- Main Buttons Stack -->
+      <main class="links-stack">
+        <!-- WhatsApp -->
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="link-card highlight-card">
+          <div class="icon-wrap wa-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </div>
+          <div class="text-group">
+            <span class="btn-title">Fale Conosco no WhatsApp</span>
+            <span class="btn-subtitle">Atendimento imediato e personalizado</span>
+          </div>
+          <span class="chevron">→</span>
+        </a>
+
+        <!-- Nossos Serviços -->
+        <a href="/servicos" class="link-card">
+          <div class="icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <div class="text-group">
+            <span class="btn-title">Nossos Serviços</span>
+            <span class="btn-subtitle">Conheça nossos pilares e soluções ambientais</span>
+          </div>
+          <span class="chevron">→</span>
+        </a>
+
+        <!-- Nossos Resultados -->
+        <a href="/experiencia" class="link-card">
+          <div class="icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <div class="text-group">
+            <span class="btn-title">Resultados & Experiência</span>
+            <span class="btn-subtitle">Histórico de regularização e cases de sucesso</span>
+          </div>
+          <span class="chevron">→</span>
+        </a>
+
+        <!-- A Nativa (Sobre) -->
+        <a href="/sobre" class="link-card">
+          <div class="icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div class="text-group">
+            <span class="btn-title">Sobre Nós</span>
+            <span class="btn-subtitle">Nossa história, missão e valores estratégicos</span>
+          </div>
+          <span class="chevron">→</span>
+        </a>
+
+        <!-- Website Oficial -->
+        <a href="/" class="link-card">
+          <div class="icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <div class="text-group">
+            <span class="btn-title">Site Institucional Completo</span>
+            <span class="btn-subtitle">Navegue em nossa plataforma oficial completa</span>
+          </div>
+          <span class="chevron">→</span>
+        </a>
+      </main>
+
+      <!-- Social & Contact Channels Footer -->
+      <footer class="social-footer">
+        <div class="social-icons">
+          <!-- WhatsApp -->
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <!-- Email -->
+          <a href={`mailto:${emailAddress}`} aria-label="Email" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; {new Date().getFullYear()} Nativa Service. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  /* Standalone Links Page Custom Layout Styling */
+  .links-page {
+    background-color: #ffffff !important;
+    color: var(--color-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Elegant Floating Leaves Background Particle System */
+  .leaf-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .leaf {
+    position: absolute;
+    bottom: -10%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .leaf svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  /* Delicate leaf rotation and floating keyframe animation */
+  @keyframes float-leaf {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg) scale(0.8);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-120vh) translateX(120px) rotate(360deg) scale(1.1);
+      opacity: 0;
+    }
+  }
+
+  /* Customize floating speed, delay, and layout for each leaf */
+  .leaf-1 {
+    left: 10%;
+    width: 25px;
+    height: 25px;
+    color: rgba(30, 59, 42, 0.08); /* Forest Green leaf */
+    animation: float-leaf 18s linear infinite;
+    animation-delay: 0s;
+  }
+  .leaf-2 {
+    left: 25%;
+    width: 32px;
+    height: 32px;
+    color: rgba(196, 154, 69, 0.08); /* Golden leaf */
+    animation: float-leaf 24s linear infinite;
+    animation-delay: 3s;
+  }
+  .leaf-3 {
+    left: 45%;
+    width: 20px;
+    height: 20px;
+    color: rgba(30, 59, 42, 0.06);
+    animation: float-leaf 15s linear infinite;
+    animation-delay: 8s;
+  }
+  .leaf-4 {
+    left: 65%;
+    width: 38px;
+    height: 38px;
+    color: rgba(196, 154, 69, 0.07); /* Golden leaf */
+    animation: float-leaf 22s linear infinite;
+    animation-delay: 1s;
+  }
+  .leaf-5 {
+    left: 80%;
+    width: 24px;
+    height: 24px;
+    color: rgba(30, 59, 42, 0.09);
+    animation: float-leaf 19s linear infinite;
+    animation-delay: 11s;
+  }
+  .leaf-6 {
+    left: 90%;
+    width: 28px;
+    height: 28px;
+    color: rgba(196, 154, 69, 0.05);
+    animation: float-leaf 27s linear infinite;
+    animation-delay: 5s;
+  }
+
+  /* Content Container */
+  .links-container {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Profile Header Styles */
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .logo-wrapper {
+    width: 115px;
+    height: 115px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 10px 30px rgba(30, 59, 42, 0.08);
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .logo-wrapper:hover {
+    transform: rotate(360deg) scale(1.06);
+    box-shadow: 0 15px 35px rgba(196, 154, 69, 0.2);
+  }
+  .profile-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Removed brightness and invert filters so the ORIGINAL brand identity shows perfectly */
+  }
+  .profile-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+  }
+  .tagline {
+    font-size: 1rem;
+    color: var(--color-accent);
+    font-style: italic;
+    opacity: 0.95;
+    max-width: 320px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  /* Links Stack */
+  .links-stack {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 3.5rem;
+  }
+  .link-card {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    background: rgba(30, 59, 42, 0.03);
+    border: 1px solid rgba(30, 59, 42, 0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(196, 154, 69, 0.03) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .link-card:hover {
+    transform: translateY(-4px);
+    background: rgba(30, 59, 42, 0.06);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 25px rgba(30, 59, 42, 0.07), 0 0 15px rgba(196, 154, 69, 0.03);
+  }
+  .link-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Specific Highlight Style (WhatsApp) */
+  .highlight-card {
+    background: rgba(196, 154, 69, 0.08);
+    border-color: rgba(196, 154, 69, 0.18);
+  }
+  .highlight-card:hover {
+    background: rgba(196, 154, 69, 0.14);
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 30px rgba(196, 154, 69, 0.12);
+  }
+
+  /* Link Card Internal elements */
+  .icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(196, 154, 69, 0.1);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  .wa-icon {
+    background: rgba(37, 211, 102, 0.08);
+    color: #25d366;
+  }
+  .link-card:hover .icon-wrap {
+    transform: scale(1.05);
+  }
+  .link-card:hover .wa-icon {
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+  }
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+  }
+  .btn-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.2rem;
+    transition: color 0.3s ease;
+  }
+  .link-card:hover .btn-title {
+    color: var(--color-primary);
+  }
+  .btn-subtitle {
+    font-size: 0.85rem;
+    color: #555555;
+    opacity: 0.85;
+  }
+  .chevron {
+    font-size: 1.3rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+  }
+  .link-card:hover .chevron {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  /* Social Footer */
+  .social-footer {
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(30, 59, 42, 0.03);
+    border: 1px solid rgba(30, 59, 42, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .social-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(196, 154, 69, 0.15);
+  }
+  .copyright {
+    font-size: 0.8rem;
+    color: #666666;
+    opacity: 0.65;
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 480px) {
+    .links-page {
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    .profile-header {
+      margin-bottom: 2.2rem;
+    }
+    .logo-wrapper {
+      width: 100px;
+      height: 100px;
+    }
+    .profile-header h1 {
+      font-size: 1.9rem;
+    }
+    .tagline {
+      font-size: 0.95rem;
+    }
+    .link-card {
+      padding: 1rem 1.2rem;
+    }
+    .icon-wrap {
+      width: 42px;
+      height: 42px;
+      margin-right: 1rem;
+    }
+    .btn-title {
+      font-size: 1.05rem;
+    }
+    .btn-subtitle {
+      font-size: 0.8rem;
+    }
+  }
+</style>
