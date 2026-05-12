@@ -9,46 +9,76 @@
     <div class="partners-grid mt-3">
       <!-- Mayne Veronesi -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-avatar">
+          <img src="/images/parceiros/mayneVeronesi.png" alt="Mayne Veronesi" class="avatar-img" />
+        </div>
         <h3>Mayne Veronesi</h3>
         <p class="role">Engenheira Ambiental e Sanitarista</p>
         <p class="desc">Engenheira de Segurança do Trabalho, Mestre em Tecnologia, Ambiente e Sociedade.</p>
       </div>
+      <!-- Lais Monteiro -->
+      <div class="partner-card gsap-fade-up">
+        <div class="partner-avatar">
+          <img src="/images/parceiros/laisMonteiro.png" alt="Lais Monteiro" class="avatar-img" />
+        </div>
+        <h3>Lais Monteiro</h3>
+        <p class="role">Geógrafa Bacharela</p>
+        <p class="desc">Com MBA em Gestão Ambiental, Pós em Qualidade do Solo e Recuperação de Áreas Degradadas. CREA/PE: 1821185463.</p>
+      </div>
       <!-- Maurício Bossi -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-avatar">
+          <img src="/images/parceiros/mauricioBossi.png" alt="Maurício Bossi" class="avatar-img" />
+        </div>
         <h3>Maurício Bossi</h3>
         <p class="role">Engenheiro Civil</p>
-        <p class="desc">Especialista em Gestão Ambiental. CREA: 131834/D.</p>
+        <p class="desc">Especialista em Gestão Ambiental.<br>CREA: 131834/D.</p>
       </div>
       <!-- João Gabriel -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-avatar">
+          <img src="/images/parceiros/joaoGabriel.png" alt="João Gabriel" class="avatar-img" />
+        </div>
         <h3>João Gabriel</h3>
         <p class="role">Engenheiro Geólogo – Geotécnico</p>
         <p class="desc">Mestre em Geologia Sedimentar, Pós Graduado em Engenharia Ambiental e Doutorando em Geociências.</p>
       </div>
     </div>
 
-    <div class="partners-category-title mt-5">Empresas Parceiras</div>
+    <div class="partners-category-title mt-extra">Empresas Parceiras</div>
     <div class="partners-grid mt-3">
       <!-- AgroAudi -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-logo">
+          <img src="/images/parceiros/agroAudi.jpeg" alt="AgroAudi" class="logo-img" />
+        </div>
         <h3>AgroAudi</h3>
         <p class="role">Mineração e Gestão Ambiental</p>
         <p class="desc">Empresa especializada em Mineração e Gestão Ambiental.</p>
       </div>
       <!-- AG mapa -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-logo">
+          <img src="/images/parceiros/agMapa.jpeg" alt="AG mapa" class="logo-img" />
+        </div>
         <h3>AG mapa</h3>
         <p class="role">Agrimensura & Geoprocessamento</p>
         <p class="desc">Empresa especializada em Agrimensura, Geoprocessamento e Levantamentos topográficos.</p>
       </div>
       <!-- Prevention -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-logo">
+          <img src="/images/parceiros/prevention.jpeg" alt="Prevention" class="logo-img" />
+        </div>
         <h3>Prevention</h3>
         <p class="role">Mineração e Gestão Ambiental</p>
-        <p class="desc">Empresa especializada em Mineração e Gestão Ambiental.</p>
+        <p class="desc">Empresa especializada in Mineração e Gestão Ambiental.</p>
       </div>
       <!-- Sonar -->
       <div class="partner-card gsap-fade-up">
+        <div class="partner-logo">
+          <img src="/images/parceiros/sonar.jpeg" alt="Sonar" class="logo-img" />
+        </div>
         <h3>Sonar</h3>
         <p class="role">Práticas de GRC e ESG</p>
         <p class="desc">Consultoria em gestão empresarial por Renata Bertele. Práticas de GRC e ESG.</p>
@@ -61,6 +91,7 @@
   .section-padding { padding: 8rem 0; }
   .section-title { font-size: 3rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
   .section-subtitle { font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto; text-align: center; }
+  .mt-extra { margin-top: 10rem; }
   .mt-5 { margin-top: 5rem; }
   .mt-3 { margin-top: 2rem; }
   
@@ -75,9 +106,83 @@
     margin: 4rem auto 0 auto;
   }
 
-  .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-  .partner-card { padding: 3rem 2rem; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .partner-card {
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.4s ease;
+  }
+  .partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-accent);
+  }
+
+  .partner-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(196, 154, 69, 0.15);
+    transition: all 0.4s ease;
+    background-color: #fcfbfa;
+  }
+  .partner-card:hover .partner-avatar {
+    transform: scale(1.05);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 20px rgba(30, 59, 42, 0.15);
+  }
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .partner-logo {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+  }
+  .logo-img {
+    max-height: 100%;
+    max-width: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+  .partner-card:hover .logo-img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
   .partner-card h3 { color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem; }
   .role { color: var(--color-accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; }
   .desc { font-size: 0.95rem; color: #666; line-height: 1.5; }
+
+  @media (max-width: 768px) {
+    .partners-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

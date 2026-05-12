@@ -189,7 +189,7 @@ Minha experiência em liderança de equipes, estruturação de processos e gest�
 **Dados Cadastrais:**
 - **Razão Social:** Nativa Service LTDA
 - **CNPJ:** 65.491.178/0001-28
-- **Endereço:** Rua 18, n°464 – Setor Negrinho Carrilho. CEP: 76.385-018
+- **Endereço:** Goianésia - GO. CEP: 76.385-018
 
 **Canais de Atendimento:**
 - **E-mail:** contato@nativaservice.com
