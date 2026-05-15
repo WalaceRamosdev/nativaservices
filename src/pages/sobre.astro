@@ -321,7 +321,7 @@ import HeroAnimation from '../components/HeroAnimation.astro';
           toggleBtn.textContent = isExpanded ? 'Ver menos' : 'Saiba mais';
           
           // Refresh ScrollTrigger as the page height changed
-          ScrollTrigger.refresh();
+          (window as any).ScrollTrigger.refresh();
         });
       }
     }
