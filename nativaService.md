@@ -156,7 +156,7 @@ Empresas que já confiam na governança e estratégia ambiental da Nativa Servic
 
 ## 10. Resultados Entregues
 *Principais resultados alcançados:*
-- **451** Processos conduzidos junto ao órgãos SEMAD, ANA, FEAM, SUPRAM, IEF, IGAM e IBAMA;
+- **451** Processos conduzidos junto aos órgãos SEMAD, ANA, FEAM, SUPRAM, IEF, IGAM e IBAMA;
 - Entrega de **100** declarações, **50** autorizações ambientais e **31** licenças de complexidade alta;
 - Atendimentos a **1951** requisitos obrigatórios no Iusnatura;
 - Estruturação do LAIA – Levantamento de Aspectos e Impactos Ambientais;
