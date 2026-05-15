@@ -108,9 +108,15 @@ import HeroAnimation from '../components/HeroAnimation.astro';
           <div class="bio">
             <p>"Sou uma profissional com 8 anos de experiência em Sustentabilidade, ESG e Gestão Ambiental, com atuação em ambientes industriais e agroindustriais e forte foco em governança ambiental, conformidade regulatória e gestão estratégica de riscos.</p>
             <p>Ao longo da minha trajetória, atuei na estruturação e fortalecimento de áreas ambientais, conduzindo a regularização de mais de 440 processos ambientais, a reorganização de fluxos e indicadores de sustentabilidade e a otimização de processos que resultaram em redução de passivos e ganhos de eficiência operacional.</p>
-            <p>Também possuo experiência na gestão de indicadores ESG e na condução de reportes corporativos para iniciativas e índices de sustentabilidade reconhecidos, como CDP e ISE B3, além da coordenação de auditorias e da atuação integrada com áreas operacionais e estratégicas para apoiar decisões corporativas baseadas em dados e gestão de riscos.</p>
-            <p>Paralelamente, desenvolvi sólida atuação em geoprocessamento aplicado à gestão ambiental, ampliando a capacidade de análise territorial e planejamento ambiental voltado à sustentabilidade e à segurança regulatória dos empreendimentos.</p>
-            <p>Minha experiência em liderança de equipes, estruturação de processos e gestão estratégica da agenda ESG permite apoiar organizações no fortalecimento da governança ambiental, na redução de riscos regulatórios e na geração de valor sustentável para os negócios."</p>
+            
+            <div class="bio-extra" id="full-bio">
+              <p>Também possuo experiência na gestão de indicadores ESG e na condução de reportes corporativos para iniciativas e índices de sustentabilidade reconhecidos, como CDP e ISE B3, além da coordenação de auditorias e da atuação integrada com áreas operacionais e estratégicas para apoiar decisões corporativas baseadas em dados e gestão de riscos.</p>
+              <p>Paralelamente, desenvolvi sólida atuação em geoprocessamento aplicado à gestão ambiental, ampliando a capacidade de análise territorial e planejamento ambiental voltado à sustentabilidade e à segurança regulatória dos empreendimentos.</p>
+              <p>Minha experiência em liderança de equipes, estruturação de processos e gestão estratégica da agenda ESG permite apoiar organizações no fortalecimento da governança ambiental, na redução de riscos regulatórios e na geração de valor sustentável para os negócios."</p>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button id="toggle-bio-btn" class="btn">Saiba mais</button>
           </div>
         </div>
       </div>
@@ -261,6 +267,17 @@ import HeroAnimation from '../components/HeroAnimation.astro';
     color: #444;
     line-height: 1.7;
   }
+  .bio-extra {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .bio-extra.show {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 1rem;
+  }
 
   @media (max-width: 768px) {
     .values-grid { grid-template-columns: 1fr; }
@@ -294,6 +311,19 @@ import HeroAnimation from '../components/HeroAnimation.astro';
         scrollTrigger: { trigger: '.model-grid', start: "top bottom-=100" },
         scale: 0.8, opacity: 0, duration: 0.8, stagger: 0.15, ease: "back.out(1.5)"
       });
+
+      // Bio Toggle Logic
+      const toggleBtn = document.getElementById('toggle-bio-btn');
+      const bioExtra = document.getElementById('full-bio');
+      if (toggleBtn && bioExtra) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = bioExtra.classList.toggle('show');
+          toggleBtn.textContent = isExpanded ? 'Ver menos' : 'Saiba mais';
+          
+          // Refresh ScrollTrigger as the page height changed
+          ScrollTrigger.refresh();
+        });
+      }
     }
   });
 </script>
