@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroAnimation from "../components/HeroAnimation.astro";
 ---
 
 <Layout title="Contato | Nativa Service">
   <div class="page-header">
-    <HeroAnimation />
+    <div class="page-header-bg"></div>
     <div class="container text-center">
       <h1 class="gsap-reveal">Fale <span class="accent">Conosco</span></h1>
       <p class="subtitle gsap-reveal-delay">
@@ -102,6 +101,29 @@ import HeroAnimation from "../components/HeroAnimation.astro";
     overflow: hidden;
     color: #fff;
     text-align: center;
+  }
+  .page-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #122119;
+    background-image: url("/images/identidadeVisual/heroImage-nativaService.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+  }
+  .page-header-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(18,33,25,0.5) 0%, rgba(18,33,25,0.85) 100%);
+    z-index: 1;
+  }
+  .page-header > .container {
+    position: relative;
+    z-index: 2;
   }
   .page-header h1 {
     font-size: 4rem;
